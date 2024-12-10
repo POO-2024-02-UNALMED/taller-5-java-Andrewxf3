@@ -4,11 +4,13 @@ public class Anfibio extends Animal {
     private String colorPiel;
     private boolean venenoso;
 
+    // Constructor vacío
     public Anfibio() {
         super();
         incrementarAnfibios();
     }
 
+    // Constructor con parámetros
     public Anfibio(String nombre, int edad, String habitat, String genero, String colorPiel, boolean venenoso) {
         super(nombre, edad, habitat, genero);
         this.colorPiel = colorPiel;
@@ -21,6 +23,7 @@ public class Anfibio extends Animal {
         return "saltar";
     }
 
+    // Getters y setters
     public String getColorPiel() {
         return colorPiel;
     }

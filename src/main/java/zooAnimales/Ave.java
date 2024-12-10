@@ -3,11 +3,13 @@ package zooAnimales;
 public class Ave extends Animal {
     private String colorPlumas;
 
+    // Constructor vacío
     public Ave() {
         super();
         incrementarAves();
     }
 
+    // Constructor con parámetros
     public Ave(String nombre, int edad, String habitat, String genero, String colorPlumas) {
         super(nombre, edad, habitat, genero);
         this.colorPlumas = colorPlumas;
@@ -19,6 +21,7 @@ public class Ave extends Animal {
         return "volar";
     }
 
+    // Getters y setters
     public String getColorPlumas() {
         return colorPlumas;
     }

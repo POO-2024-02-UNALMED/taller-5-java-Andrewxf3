@@ -4,11 +4,13 @@ public class Mamifero extends Animal {
     private boolean pelaje;
     private int patas;
 
+    // Constructor vacío
     public Mamifero() {
         super();
         incrementarMamiferos();
     }
 
+    // Constructor con parámetros
     public Mamifero(String nombre, int edad, String habitat, String genero, boolean pelaje, int patas) {
         super(nombre, edad, habitat, genero);
         this.pelaje = pelaje;
@@ -21,6 +23,7 @@ public class Mamifero extends Animal {
         return "desplazarse";
     }
 
+    // Getters y setters
     public boolean isPelaje() {
         return pelaje;
     }

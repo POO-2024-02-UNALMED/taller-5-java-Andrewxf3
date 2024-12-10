@@ -4,11 +4,13 @@ public class Reptil extends Animal {
     private String colorEscamas;
     private int largoCola;
 
+    // Constructor vacío
     public Reptil() {
         super();
         incrementarReptiles();
     }
 
+    // Constructor con parámetros
     public Reptil(String nombre, int edad, String habitat, String genero, String colorEscamas, int largoCola) {
         super(nombre, edad, habitat, genero);
         this.colorEscamas = colorEscamas;
@@ -21,6 +23,7 @@ public class Reptil extends Animal {
         return "reptar";
     }
 
+    // Getters y setters
     public String getColorEscamas() {
         return colorEscamas;
     }
@@ -37,4 +40,3 @@ public class Reptil extends Animal {
         this.largoCola = largoCola;
     }
 }
-

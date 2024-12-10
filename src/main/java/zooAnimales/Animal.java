@@ -5,19 +5,21 @@ public class Animal {
     private int edad;
     private String habitat;
     private String genero;
-    private static int totalAnimales = 0;
+    private static int totalAnimales;
 
     // Contadores por tipo
-    private static int mamiferos = 0;
-    private static int aves = 0;
-    private static int reptiles = 0;
-    private static int peces = 0;
-    private static int anfibios = 0;
+    private static int mamiferos;
+    private static int aves;
+    private static int reptiles;
+    private static int peces;
+    private static int anfibios;
 
+    // Constructor vacío
     public Animal() {
         totalAnimales++;
     }
 
+    // Constructor con parámetros
     public Animal(String nombre, int edad, String habitat, String genero) {
         this.nombre = nombre;
         this.edad = edad;
@@ -35,6 +37,7 @@ public class Animal {
                "Anfibios: " + anfibios;
     }
 
+    // Método movimiento (general)
     public String movimiento() {
         return "desplazarse";
     }
