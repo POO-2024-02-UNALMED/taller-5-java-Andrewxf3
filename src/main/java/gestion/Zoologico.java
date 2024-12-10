@@ -5,13 +5,19 @@ import java.util.ArrayList;
 public class Zoologico {
     private String nombre;
     private String ubicacion;
-    private ArrayList<Zona> zonas = new ArrayList<>();
+    private ArrayList<Zona> zonas;
+
+    public Zoologico() {
+        this.zonas = new ArrayList<>();
+    }
 
     public Zoologico(String nombre, String ubicacion) {
         this.nombre = nombre;
         this.ubicacion = ubicacion;
+        this.zonas = new ArrayList<>();
     }
 
+    // Métodos
     public void agregarZonas(Zona zona) {
         zonas.add(zona);
     }
@@ -24,7 +30,6 @@ public class Zoologico {
         return total;
     }
 
-    // Getters y setters
     public String getNombre() {
         return nombre;
     }
@@ -39,5 +44,9 @@ public class Zoologico {
 
     public void setUbicacion(String ubicacion) {
         this.ubicacion = ubicacion;
+    }
+
+    public ArrayList<Zona> getZonas() {
+        return zonas;
     }
 }

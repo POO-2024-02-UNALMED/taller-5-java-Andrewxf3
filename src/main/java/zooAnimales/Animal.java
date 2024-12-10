@@ -27,21 +27,6 @@ public class Animal {
         return "desplazarse";
     }
 
-    @Override
-    public String toString() {
-        return "Mi nombre es " + nombre + ", tengo una edad de " + edad + ", habito en " + habitat + 
-               " y mi genero es " + genero;
-    }
-
-    public static String totalPorTipo() {
-        return "Mamiferos: " + Mamifero.cantidadMamiferos() + "\n" +
-               "Aves: " + Ave.cantidadAves() + "\n" +
-               "Reptiles: " + Reptil.cantidadReptiles() + "\n" +
-               "Peces: " + Pez.cantidadPeces() + "\n" +
-               "Anfibios: " + Anfibio.cantidadAnfibios();
-    }
-
-    // Getters y setters
     public String getNombre() {
         return nombre;
     }
