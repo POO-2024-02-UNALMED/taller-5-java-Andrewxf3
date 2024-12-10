@@ -1,18 +1,18 @@
 package zooAnimales;
 
 public class Ave extends Animal {
+    private String colorPlumas;
+
     public Ave() {
         super();
-        incrementarAves();
     }
 
     public Ave(String nombre, int edad, String habitat, String genero, String colorPlumas) {
         super(nombre, edad, habitat, genero);
-        incrementarAves();
+        this.colorPlumas = colorPlumas;
     }
 
-    @Override
-    public String movimiento() {
-        return "volar";
+    public String getColorPlumas() {
+        return colorPlumas;
     }
 }

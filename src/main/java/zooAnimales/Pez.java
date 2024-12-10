@@ -1,18 +1,24 @@
 package zooAnimales;
 
 public class Pez extends Animal {
+    private String colorEscamas;
+    private int cantidadAletas;
+
     public Pez() {
         super();
-        incrementarPeces();
     }
 
     public Pez(String nombre, int edad, String habitat, String genero, String colorEscamas, int cantidadAletas) {
         super(nombre, edad, habitat, genero);
-        incrementarPeces();
+        this.colorEscamas = colorEscamas;
+        this.cantidadAletas = cantidadAletas;
     }
 
-    @Override
-    public String movimiento() {
-        return "nadar";
+    public String getColorEscamas() {
+        return colorEscamas;
+    }
+
+    public int getCantidadAletas() {
+        return cantidadAletas;
     }
 }
