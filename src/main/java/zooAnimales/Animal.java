@@ -5,7 +5,6 @@ public class Animal {
     private int edad;
     private String habitat;
     private String genero;
-    private static int totalAnimales;
 
     public Animal() {}
 
@@ -14,38 +13,37 @@ public class Animal {
         this.edad = edad;
         this.habitat = habitat;
         this.genero = genero;
-        totalAnimales++;
-    }
-
-    public static int getTotalAnimales() {
-        return totalAnimales;
     }
 
     public String getNombre() {
         return nombre;
     }
 
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
     public int getEdad() {
         return edad;
+    }
+
+    public void setEdad(int edad) {
+        this.edad = edad;
     }
 
     public String getHabitat() {
         return habitat;
     }
 
+    public void setHabitat(String habitat) {
+        this.habitat = habitat;
+    }
+
     public String getGenero() {
         return genero;
     }
 
-    public static String totalPorTipo() {
-        return "Mamíferos: " + Mamifero.listado.size() + "\n" +
-               "Aves: " + Ave.listado.size() + "\n" +
-               "Reptiles: " + Reptil.listado.size() + "\n" +
-               "Peces: " + Pez.listado.size() + "\n" +
-               "Anfibios: " + Anfibio.listado.size();
-    }
-
-    public String movimiento() {
-        return "desplazarse";
+    public void setGenero(String genero) {
+        this.genero = genero;
     }
 }
