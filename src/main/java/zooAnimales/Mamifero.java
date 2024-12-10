@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Mamifero extends Animal {
     private static int caballos;
     private static int leones;
-    private static ArrayList<Mamifero> listado = new ArrayList<>();
+    public static ArrayList<Mamifero> listado = new ArrayList<>();
 
     public Mamifero() {
         super();
