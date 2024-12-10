@@ -7,9 +7,21 @@ public class Anfibio extends Animal {
     private static int salamandras;
     private static ArrayList<Anfibio> listado = new ArrayList<>();
 
+    public Anfibio() {
+        super();
+    }
+
     public Anfibio(String nombre, int edad, String habitat, String genero, String colorPiel, boolean venenoso) {
         super(nombre, edad, habitat, genero);
         listado.add(this);
+    }
+
+    public static int getRanas() {
+        return ranas;
+    }
+
+    public static int getSalamandras() {
+        return salamandras;
     }
 
     public static Anfibio crearRana(String nombre, int edad, String genero) {

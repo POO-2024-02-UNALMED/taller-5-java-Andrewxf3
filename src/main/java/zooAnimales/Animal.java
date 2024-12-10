@@ -7,6 +7,8 @@ public class Animal {
     private String genero;
     private static int totalAnimales;
 
+    public Animal() {}
+
     public Animal(String nombre, int edad, String habitat, String genero) {
         this.nombre = nombre;
         this.edad = edad;
@@ -17,9 +19,5 @@ public class Animal {
 
     public static int getTotalAnimales() {
         return totalAnimales;
-    }
-
-    public static void incrementarTotalAnimales() {
-        totalAnimales++;
     }
 }

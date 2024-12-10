@@ -7,9 +7,21 @@ public class Reptil extends Animal {
     private static int serpientes;
     private static ArrayList<Reptil> listado = new ArrayList<>();
 
+    public Reptil() {
+        super();
+    }
+
     public Reptil(String nombre, int edad, String habitat, String genero, String colorEscamas, int largoCola) {
         super(nombre, edad, habitat, genero);
         listado.add(this);
+    }
+
+    public static int getIguanas() {
+        return iguanas;
+    }
+
+    public static int getSerpientes() {
+        return serpientes;
     }
 
     public static Reptil crearIguana(String nombre, int edad, String genero) {

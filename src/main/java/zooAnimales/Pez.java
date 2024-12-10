@@ -7,9 +7,21 @@ public class Pez extends Animal {
     private static int bacalaos;
     private static ArrayList<Pez> listado = new ArrayList<>();
 
+    public Pez() {
+        super();
+    }
+
     public Pez(String nombre, int edad, String habitat, String genero, String colorEscamas, int cantidadAletas) {
         super(nombre, edad, habitat, genero);
         listado.add(this);
+    }
+
+    public static int getSalmones() {
+        return salmones;
+    }
+
+    public static int getBacalaos() {
+        return bacalaos;
     }
 
     public static Pez crearSalmon(String nombre, int edad, String genero) {
