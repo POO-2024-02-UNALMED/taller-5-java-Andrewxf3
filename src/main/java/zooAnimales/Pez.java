@@ -4,12 +4,16 @@ public class Pez extends Animal {
     private String colorEscamas;
     private int cantidadAletas;
 
-    public Pez() {}
+    public Pez() {
+        super();
+        incrementarPeces();
+    }
 
     public Pez(String nombre, int edad, String habitat, String genero, String colorEscamas, int cantidadAletas) {
         super(nombre, edad, habitat, genero);
         this.colorEscamas = colorEscamas;
         this.cantidadAletas = cantidadAletas;
+        incrementarPeces();
     }
 
     @Override
@@ -33,3 +37,4 @@ public class Pez extends Animal {
         this.cantidadAletas = cantidadAletas;
     }
 }
+

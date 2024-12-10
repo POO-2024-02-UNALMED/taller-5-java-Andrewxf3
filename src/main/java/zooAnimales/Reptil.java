@@ -4,12 +4,16 @@ public class Reptil extends Animal {
     private String colorEscamas;
     private int largoCola;
 
-    public Reptil() {}
+    public Reptil() {
+        super();
+        incrementarReptiles();
+    }
 
     public Reptil(String nombre, int edad, String habitat, String genero, String colorEscamas, int largoCola) {
         super(nombre, edad, habitat, genero);
         this.colorEscamas = colorEscamas;
         this.largoCola = largoCola;
+        incrementarReptiles();
     }
 
     @Override
@@ -33,3 +37,4 @@ public class Reptil extends Animal {
         this.largoCola = largoCola;
     }
 }
+
