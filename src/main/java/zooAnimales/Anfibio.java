@@ -1,30 +1,24 @@
 package zooAnimales;
 
 public class Anfibio extends Animal {
-    private String colorPiel;
-    private boolean venenoso;
+    private static int cantidadAnfibios;
 
-    public Anfibio() {}
+    public Anfibio() {
+        super();
+        cantidadAnfibios++;
+    }
 
-    public Anfibio(String nombre, int edad, String habitat, String genero, String colorPiel, boolean venenoso) {
+    public Anfibio(String nombre, int edad, String habitat, String genero) {
         super(nombre, edad, habitat, genero);
-        this.colorPiel = colorPiel;
-        this.venenoso = venenoso;
+        cantidadAnfibios++;
     }
 
-    public String getColorPiel() {
-        return colorPiel;
+    public static int getCantidadAnfibios() {
+        return cantidadAnfibios;
     }
 
-    public void setColorPiel(String colorPiel) {
-        this.colorPiel = colorPiel;
-    }
-
-    public boolean isVenenoso() {
-        return venenoso;
-    }
-
-    public void setVenenoso(boolean venenoso) {
-        this.venenoso = venenoso;
+    @Override
+    public String movimiento() {
+        return "saltar";
     }
 }
