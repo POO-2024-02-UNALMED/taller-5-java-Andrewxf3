@@ -1,42 +1,24 @@
 package zooAnimales;
 
+import java.util.ArrayList;
+
 public class Reptil extends Animal {
-    private String colorEscamas;
-    private int largoCola;
+    private static int iguanas;
+    private static int serpientes;
+    private static ArrayList<Reptil> listado = new ArrayList<>();
 
-    // Constructor vacío
-    public Reptil() {
-        super();
-        incrementarReptiles();
-    }
-
-    // Constructor con parámetros
     public Reptil(String nombre, int edad, String habitat, String genero, String colorEscamas, int largoCola) {
         super(nombre, edad, habitat, genero);
-        this.colorEscamas = colorEscamas;
-        this.largoCola = largoCola;
-        incrementarReptiles();
+        listado.add(this);
     }
 
-    @Override
-    public String movimiento() {
-        return "reptar";
+    public static Reptil crearIguana(String nombre, int edad, String genero) {
+        iguanas++;
+        return new Reptil(nombre, edad, "humedal", genero, "verde", 3);
     }
 
-    // Getters y setters
-    public String getColorEscamas() {
-        return colorEscamas;
-    }
-
-    public void setColorEscamas(String colorEscamas) {
-        this.colorEscamas = colorEscamas;
-    }
-
-    public int getLargoCola() {
-        return largoCola;
-    }
-
-    public void setLargoCola(int largoCola) {
-        this.largoCola = largoCola;
+    public static Reptil crearSerpiente(String nombre, int edad, String genero) {
+        serpientes++;
+        return new Reptil(nombre, edad, "jungla", genero, "blanco", 1);
     }
 }

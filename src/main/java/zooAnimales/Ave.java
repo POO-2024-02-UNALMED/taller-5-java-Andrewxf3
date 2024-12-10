@@ -1,32 +1,24 @@
 package zooAnimales;
 
+import java.util.ArrayList;
+
 public class Ave extends Animal {
-    private String colorPlumas;
+    private static int halcones;
+    private static int aguilas;
+    private static ArrayList<Ave> listado = new ArrayList<>();
 
-    // Constructor vacío
-    public Ave() {
-        super();
-        incrementarAves();
-    }
-
-    // Constructor con parámetros
     public Ave(String nombre, int edad, String habitat, String genero, String colorPlumas) {
         super(nombre, edad, habitat, genero);
-        this.colorPlumas = colorPlumas;
-        incrementarAves();
+        listado.add(this);
     }
 
-    @Override
-    public String movimiento() {
-        return "volar";
+    public static Ave crearHalcon(String nombre, int edad, String genero) {
+        halcones++;
+        return new Ave(nombre, edad, "montañas", genero, "café glorioso");
     }
 
-    // Getters y setters
-    public String getColorPlumas() {
-        return colorPlumas;
-    }
-
-    public void setColorPlumas(String colorPlumas) {
-        this.colorPlumas = colorPlumas;
+    public static Ave crearAguila(String nombre, int edad, String genero) {
+        aguilas++;
+        return new Ave(nombre, edad, "montañas", genero, "blanco y amarillo");
     }
 }
