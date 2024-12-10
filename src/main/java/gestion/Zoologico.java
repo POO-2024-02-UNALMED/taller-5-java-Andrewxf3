@@ -26,15 +26,15 @@ public class Zoologico {
         return ubicacion;
     }
 
+    public List<Zona> getZona() {
+        return zonas;
+    }
+
     public void agregarZonas(Zona zona) {
         zonas.add(zona);
     }
 
     public int cantidadTotalAnimales() {
         return zonas.stream().mapToInt(Zona::cantidadAnimales).sum();
-    }
-
-    public List<Zona> getZona() {
-        return zonas;
     }
 }
