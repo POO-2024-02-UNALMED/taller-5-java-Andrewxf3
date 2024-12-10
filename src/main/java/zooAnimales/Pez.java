@@ -3,27 +3,23 @@ package zooAnimales;
 public class Pez extends Animal {
     private static int salmones = 0;
     private static int bacalaos = 0;
-    private String colorEscamas;
-    private int cantidadAletas;
 
-    public Pez(String nombre, int edad, String habitat, String genero, String colorEscamas, int cantidadAletas) {
+    public Pez(String nombre, int edad, String habitat, String genero) {
         super(nombre, edad, habitat, genero);
-        this.colorEscamas = colorEscamas;
-        this.cantidadAletas = cantidadAletas;
     }
 
     public Pez() {
         super();
     }
 
-    public Pez crearSalmon(String nombre, int edad, String genero) {
+    public static Pez crearSalmon(String nombre, int edad, String genero) {
         salmones++;
-        return new Pez(nombre, edad, "océano", genero, "rojo", 6);
+        return new Pez(nombre, edad, "océano", genero);
     }
 
-    public Pez crearBacalao(String nombre, int edad, String genero) {
+    public static Pez crearBacalao(String nombre, int edad, String genero) {
         bacalaos++;
-        return new Pez(nombre, edad, "océano", genero, "gris", 6);
+        return new Pez(nombre, edad, "océano", genero);
     }
 
     public static int cantidadPeces() {
@@ -35,4 +31,3 @@ public class Pez extends Animal {
         return "nadar";
     }
 }
-

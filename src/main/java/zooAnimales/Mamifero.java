@@ -1,35 +1,33 @@
 package zooAnimales;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Mamifero extends Animal {
     private static int caballos = 0;
     private static int leones = 0;
-    private boolean pelaje;
-    private int patas;
 
-    public Mamifero(String nombre, int edad, String habitat, String genero, boolean pelaje, int patas) {
+    public Mamifero(String nombre, int edad, String habitat, String genero) {
         super(nombre, edad, habitat, genero);
-        this.pelaje = pelaje;
-        this.patas = patas;
     }
 
     public Mamifero() {
         super();
     }
 
-    public Mamifero crearCaballo(String nombre, int edad, String genero) {
+    public static Mamifero crearCaballo(String nombre, int edad, String genero) {
         caballos++;
-        return new Mamifero(nombre, edad, "pradera", genero, true, 4);
+        return new Mamifero(nombre, edad, "pradera", genero);
     }
 
-    public Mamifero crearLeon(String nombre, int edad, String genero) {
+    public static Mamifero crearLeon(String nombre, int edad, String genero) {
         leones++;
-        return new Mamifero(nombre, edad, "selva", genero, true, 4);
+        return new Mamifero(nombre, edad, "selva", genero);
     }
 
     public static int cantidadMamiferos() {
         return caballos + leones;
+    }
+
+    @Override
+    public String movimiento() {
+        return "desplazarse";
     }
 }
